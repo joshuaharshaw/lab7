@@ -32,5 +32,19 @@ function tallyItems (groceries) {
 
 tallyItems(groceryList);
 
+class Human {
+	constructor (name, sex, country) {
+		this.name = name, 
+		this.sex= sex, 
+		this.country=country
+	}
 
 
+	speak() {
+		console.log(name + "says hello!");
+	}
+}
+
+var Josh = new Human("Joshua", "Male", "USA");
+
+Josh.speak();
