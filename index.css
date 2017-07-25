@@ -55,10 +55,58 @@ header p {
 	margin:0px 20px;
 }
 
+.opt-list {
+	list-style: none;
+}
+
+.opt-item {
+	font-size: 1.2em;
+	width: 90%;
+	height: 27px;
+}
+
+.opt-item input {
+	float: right;
+	width: 35px;
+	margin-right: 5px;
+}
+
+.addButton {
+	float: right;
+	height: 25px;
+	background-color: white;
+	border:1px solid black;
+}
+
+.addAll {
+	height: 25px;
+	background-color: white;
+	border:1px solid black;
+	margin: 10px auto;
+}
+
 /*Main Content Box- Shopping List*/
 #main-list {
 	float: left;
 	width: 50%;
+}
+
+#list-content {
+
+}
+
+.foodItem {
+	height: 30px;
+	width: 90%;
+	font-size: 1.5em;
+	line-height: 30px;
+	margin:10px auto;
+	background-color: rgba(128,128,128, 0.36);
+	padding: 0px 10px;
+}
+
+.foodItem span {
+	float: right;
 }
 
 .list-footer {
@@ -67,5 +115,9 @@ header p {
 	font-size: 2em;
 	color: white;
 	margin-top: 10px;
-	padding-left: 10px;
+	padding: 0px 10px;
+}
+
+.list-footer span {
+	float: right;
 }

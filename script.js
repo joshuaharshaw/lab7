@@ -1,50 +1,50 @@
 var groceryList = [
-{name: "Salmon",price: 5.69}, 
-{name: "Apples",price: 3.19}, 
-{name: "Pretzels",price: 6.45},
-{name: "Water",price: 1.22}, 
-{name: "Pop",price: 2.01}
+{name: "Donut", price: 1.69, quantity: 0}, 
+{name: "Bagel", price: 2.19,  quantity: 0}, 
+{name: "Loaf", price: 1.19,  quantity: 0},
+{name: "Pastry", price: 1.22,  quantity: 0}, 
+{name: "Pie", price: 7.01,  quantity: 0}
 ];
 
-
 function tallyItems (groceries) {
-
-	console.log("This is your tally for the day:");
 
 	var subtotal = 0;
 
 	for (var i = 0; i < groceries.length; i++) {
 	
-	var listItem = groceries[i].name + ": " + groceries[i].price;
-	
-	subtotal+=groceries[i].price;
+		var listItem = groceries[i].name;
+		var listPrice = groceries[i].price;
 
-	console.log(listItem);
+		var finalItem = `<div class="foodItem">${listItem} <span>$${listPrice}</span></div>`;
+
+		var target = document.getElementById("list-content");
+
+		target.innerHTML+= finalItem;
+
+
+		subtotal+=groceries[i].price;
 
 	}
 
-	console.log("Subtotal: $" + subtotal.toFixed(2));
+	target.innerHTML+= `<div class="foodItem">Subtotal <span>$${subtotal.toFixed(2)}</span></div>`;
 
-	console.log("Final Total: $" + (subtotal * 1.06).toFixed(2));
+	document.getElementById("finalTotal").innerHTML = "$" + (subtotal * 1.06).toFixed(2);
 
 }
-
 
 tallyItems(groceryList);
+// function addItem (e) {
+	
+// 	var target = document.getElementById('list-content');
+	
+// 	var item = e.dataset.index;
 
-class Human {
-	constructor (name, sex, country) {
-		this.name = name, 
-		this.sex= sex, 
-		this.country=country
-	}
+// 	var totalItem = 
 
 
-	speak() {
-		console.log(name + "says hello!");
-	}
-}
+// 	if (item.quantity === 0) {
 
-var Josh = new Human("Joshua", "Male", "USA");
+// 		target.append(totalItem);
 
-Josh.speak();
+// 	}
+// } 
