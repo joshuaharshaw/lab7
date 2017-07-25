@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Plaster|Varela+Round");
+@import url("https://fonts.googleapis.com/css?family=Plaster|Monoton");
 
 /* Standard Classes*/
 .material {
@@ -24,14 +24,21 @@ header {
 	min-height: 75px;
 	padding:5px;
 	margin-bottom: 50px;
+	text-align: center;
 }
- 
+
+header span {
+	font-size: 2.5em;
+	color:white;
+	font-family: Monoton;
+} 
+
 header p {
 	color: white;
-	font-size: 2.5em;
 	margin:11px 0px;
 	font-family: Plaster;
 }
+
 
 
 /*Site-Wide Styles*/
@@ -82,7 +89,7 @@ header p {
 	height: 25px;
 	background-color: white;
 	border:1px solid black;
-	margin: 10px auto;
+	margin: 10px 60px;
 }
 
 /*Main Content Box- Shopping List*/
